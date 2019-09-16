@@ -1,0 +1,14 @@
+.home {
+  padding: 15px;
+}
+.strava-svg {
+  width: 60px;
+}
+.strava-icon {
+  background: #eee;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+}

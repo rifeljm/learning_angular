@@ -1,11 +1,14 @@
 .header {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
+  background: #0072bc;
 }
 
 .header a {
   color: #fff;
   text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.header a.active {
+  border-bottom: 3px #99dddd solid;
 }

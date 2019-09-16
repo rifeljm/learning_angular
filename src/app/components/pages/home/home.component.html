@@ -1,0 +1,8 @@
+<div class="home">
+  <mat-progress-spinner class="example-margin" [color]="color" [mode]="mode" [value]="value"> </mat-progress-spinner>
+  <div *ngIf="!fetching" (click)="clickHandler()" class="strava-icon">
+    <div><img class="strava-svg" src="/assets/strava.svg" /></div>
+    <div>{{ stravaButtonTitle }}</div>
+  </div>
+  <div *ngIf="fetching">Fetching metrics...</div>
+</div>

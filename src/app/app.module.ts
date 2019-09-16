@@ -1,26 +1,20 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
-import { HttpClientModule } from "@angular/common/http";
-import { FormsModule } from "@angular/forms";
-import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
-import { TodosComponent } from "./components/todos/todos.component";
-import { TodoItemComponent } from "./components/todo-item/todo-item.component";
-import { HeaderComponent } from "./components/layout/header/header.component";
-import { AddTodoComponent } from "./components/add-todo/add-todo.component";
-import { AboutComponent } from './components/pages/about/about.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/layout/header/header.component';
+import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TodosComponent,
-    TodoItemComponent,
-    HeaderComponent,
-    AddTodoComponent,
-    AboutComponent
-  ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  declarations: [AppComponent, HeaderComponent, DashboardComponent, HomeComponent],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule, MatProgressSpinnerModule, MatTabsModule],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

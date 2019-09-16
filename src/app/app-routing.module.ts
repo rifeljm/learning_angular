@@ -1,21 +1,21 @@
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
-import { TodosComponent } from "./components/todos/todos.component";
-import { AboutComponent } from "./components/pages/about/about.component";
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './components/pages/home/home.component';
+import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
-    path: "",
-    component: TodosComponent
+    path: '',
+    component: HomeComponent,
   },
   {
-    path: "about",
-    component: AboutComponent
-  }
+    path: 'dashboard',
+    component: DashboardComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
